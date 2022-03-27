@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>lesson8</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header-container"></div>
+		</header>
+		<main class="main">
+			<div class="main-container">
+				<h1>ПСЕВДОКЛАССЫ И ПСЕВДОЭЛЕМЕНТЫ</h1>
+				<h2>Псевдоклассы состояния</h2>
+				<div class="state">
+					<div class="hover-box box">
+						<h3 class="hover-title">:hover</h3>
+
+						<div class="example">
+							<a href="#" class="link-example">я кнопка</a>
+						</div>
+
+						<p class="hover-text">Срабатывает при наведении на элемент, часто применяется применяется как для ссылок так и для любого другого элемента.</p>
+
+						<div class="block-paragraph">
+							<h4>Анатомия:</h4>
+							<p>
+								селектор:псевдокласс{
+								стили учитывая псевдокласс
+								}
+								<br>
+								<span>Вложенность</span>
+								селектор:псевдокласс селектор{
+								стили учитывая псевдокласс
+								}
+							</p>
+							<p>селектор:псевдокласс{
+								стили учитывая псевдокласс
+								}
+								<br>
+								<span>Вложенность</span>
+								селектор:псевдокласс селектор{
+								стили учитывая псевдокласс
+								}
+							</p>
+							<p>селектор:псевдокласс{
+								стили учитывая псевдокласс
+								}
+								<br>
+								<span>Вложенность</span>
+								селектор:псевдокласс селектор{
+								стили учитывая псевдокласс
+								}
+							</p>
+						</div>
+
+					</div>
+
+					<div class="active-box box">
+						<h3>:active</h3>
+						<p>Срабатывает при нажатии на элемент. <br>
+							В основном применяется к ссылкам и кнопкам.</p>
+						<a href="#" class="active-link link">Я кнопка</a>
+					</div>
+				</div>
+
+				<div class="state">
+					<div class="visited-box box">
+						<h3>:visited</h3>
+						<p>Срабатывает для посещенных ссылок</p>
+						<div class="eat">
+							<a href="https://vkusno-i-prosto.ru/receipt/recepty-dlya-elektrogrilya/#h2_4" class="eat-link" target="_blank">Стэйк тунца на электрогриле</a>
+						</div>
+
+						<div class="eat">
+							<a href="https://vkusno-i-prosto.ru/receipt/recepty-dlya-elektrogrilya/#h2_8" class="eat-link" target="_blank">Кесадилья</a>
+						</div>
+
+						<div class="eat">
+							<a href="https://vkusno-i-prosto.ru/receipt/recepty-dlya-elektrogrilya/#h2_6" class="eat-link" target="_blank">Стэйк говядины на гриле</a>
+						</div>
+						<div class="eat">
+							<a href="https://vkusno-i-prosto.ru/receipt/recepty-dlya-elektrogrilya/#h2_10" class="eat-link">Бельгийские вафли на электрогриле
+							</a>
+						</div>
+					</div>
+
+					<div class="box box-focus">
+						<h3>:focus</h3>
+						<p>Срабатывает при получении элементом фокуса.
+							Часто применяется к элементам форм и прочим интерактивным объектам</p>
+						<a href="#" class="focus-link">я кнопка</a>
+						<a href="#" class="focus-link">я кнопка</a>
+						<a href="#" class="focus-link">я кнопка</a>
+						<a href="#" class="focus-link">я кнопка</a>
+						<a href="#" class="focus-link">я кнопка</a>
+					</div>
+					<div id="box-target" class="box">
+						<h3>:target</h3>
+						<a href="#target" class="link link-target">Открыть</a>
+						<a href="#box-target" class="link link-target">Закрыть</a>
+						<p>Срабатывает когда элемент является объектом, на который ссылаются</p>
+						<p id="target" class="text-target"> (Не применяется в реальных проектах)</p>
+
+					</div>
+				</div>
+
+				<h2>Псевдоклассы положения в коде</h2>
+
+
+				<div class="kid">
+					<h3>first-child и last-child</h3>
+					<p>.класс p:first-child {} <br>
+						.класс p:last-child {}</p>
+					<div class="children frame">
+						<p> <span class="child">first-child</span> Если первый элемент будет не тот, который указан в пседоклассе, то свойство не сработает</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim rerum at ipsa quam voluptatum dolor neque, vitae eos! Excepturi reiciendis accusantium repellendus explicabo vel corrupti, velit incidunt iste ex adipisci.</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim rerum at ipsa quam voluptatum dolor neque, vitae eos! Excepturi reiciendis accusantium repellendus explicabo vel corrupti, velit incidunt iste ex adipisci.</p>
+						<p><span class="child">last-child</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim rerum at ipsa quam voluptatum dolor neque, vitae eos! Excepturi reiciendis accusantium repellendus explicabo vel corrupti, velit incidunt iste ex adipisci.</p>
+					</div>
+				</div>
+
+
+				<div class="kid safe">
+					<div class="safe-text">более безопасный (обращение по типу)</div>
+					<h3>fist-of-type <br> и last-of-type</h3>
+					<p>.класс p:first-of-type {} <br>
+						.класс p:last-of-type {}</p>
+
+					<div class="children-type frame">
+						<span class="span">Я -- span</span>
+						<p><span class=" child">fist-of-type</span> Обращение к первому элементу данного типа, даже если перед ним есть тег другого типа</p>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, consequatur fugit qui sunt </p>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, consequatur fugit qui sunt </p>
+
+						<p><span class="child">last-of-type</span> Обращение к последнему элементу данного типа, даже если после него есть тег другого типа</p>
+						<span class="span">Я -- span</span>
+					</div>
+				</div>
+				<div class="kid">
+					<h3>Любой первый или последний элемент</h3>
+					<p>.класс *:first-child {} <br>
+						.класс *:last-child {}
+					</p>
+					<div class="star frame">
+						<span>я -- span</span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, vel.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, vel.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, vel.</p>
+					</div>
+
+					<h3 class="top">:nth-child(порядковый номер элемента)</h3>
+					<p>Если первый элемент будет не p, стиль не сработает <br> Можно указать несколько через запятую</p>
+					<div class="nth frame">
+						<p>Lorem ipsum dolor sit amet.</p>
+						<p>Lorem ipsum dolor sit amet.</p>
+						<p>.класс p:nth-child(3)</p>
+						<p>Lorem ipsum dolor sit amet.</p>
+					</div>
+				</div>
+
+				<div class="kid odd">
+					<h3>Ко всем нечетным</h3>
+					<p>.класс p:nth-child(odd)</p>
+					<div class="frame">
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+					</div>
+
+
+				</div>
+				<div class="kid">
+					<h3>Ко всем четным</h3>
+					<p>.класс p:nth-child(even)</p>
+					<div class="frame even">
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+					</div>
+				</div>
+
+				<div class="kid third">
+					<h3>Каждый третий</h3>
+					<p>.класс p:nth-child(3n)</p>
+					<div class="frame">
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+					</div>
+				</div>
+
+
+				<div class="kid">
+					<h3>Каждый третий, начиная с второго</h3>
+					<p>.класс p:nth-child(3n+2)</p>
+					<div class="frame combo">
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+					</div>
+				</div>
+
+				<div class="kid safe">
+					<div class="safe-text">более безопасный (обращение по типу)</div>
+					<h3>Обращение к конкретным элементам в блоке по типу</h3>
+					<p>.класс p:nth-of-type(even)</p>
+					<div class="frame complit">
+						<span> я -- span</span>
+						<span> я -- span</span>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+
+					</div>
+				</div>
+
+				<div class="kid">
+					<h3>Исключение</h3>
+					<p>.класс p:not(селектор/псевдокласс) {}</p>
+					<div class="frame exept">
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+						<p> Lorem ipsum dolor sit amet.</p>
+					</div>
+				</div>
+
+				<h3>Убираем margin у последнего параграфа</h3>
+				<p class="subtitle">:not(:last-child)</p>
+				<p>Здесь не нужен <mark>:last-of-type</mark>, т.к. если параграф будет не последний, то отступ нужен </p>
+				<div class="indent">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, deleniti.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, deleniti.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, deleniti.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, deleniti.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, deleniti.</p>
+				</div>
+
+				<h3>Убрать отступ у любого последнего объекта</h3>
+				<div class="good">
+					<h4>заголовок</h4>
+					<a href="#" class="link-good">Я ссылка</a>
+					<div>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est architecto deleniti eaque.</p>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est architecto deleniti eaque.</p>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est architecto deleniti eaque.</p>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est architecto deleniti eaque.</p>
+					</div>
+
+
+				</div>
+
+				<h2>Псевдоэлементы</h2>
+				<h5>Анатомия <br>
+					селектор::псевдоэлемент{
+					стили
+					}</h5>
+
+				<div class="line">
+					<h3>first-letter and first-line</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae perspiciatis iusto atque eligendi reiciendis molestiae voluptatibus provident. Velit, deleniti. Iusto autem necessitatibus nostrum dolores iure error aut. Error, ex dolores?</p>
+				</div>
+
+				<h3>before and after</h3>
+				<ul class="list">
+					<li>::before и ::after НЕ работают
+						без параметра content:"";</li>
+					<li>::before и ::after - СТРОЧНЫЕ!!!</li>
+				</ul>
+
+
+				<h3>hover and before</h3>
+				<p class="sum">Наведи на меня! Наведи на меня!Наведи на меня! Наведи на меня! Наведи на меня!Наведи на меня! Наведи на меня! Наведи на меня! Наведи на меня! Наведи на меня! Наведи на меня! Наведи на меня!</p>
+
+
+
+				<h3>CSS-cчетчик</h3>
+				<ul class="counter-list">
+					<li>Первый Первый Первый Первый Первый Первый Первый Первый Первый Первый Первый Первый Первый </li>
+					<li>второй второй второй второй второй второй второй второй второй второй второй второй второй второй второй </li>
+					<li>третий третий третий третий третий третий третий третий третий третий третий третий третий третий третий </li>
+					<li>четвертый четвертый четвертый четвертый четвертый четвертый четвертый четвертый четвертый четвертый четвертый четвертый четвертый четвертый четвертый четвертый </li>
+				</ul>
+				<h5>Обращение к следующему объекту при наведении</h5>
+				<ul class="next">
+					<li>Lorem ipsum dolor sit amet.</li>
+					<li>Lorem ipsum dolor sit amet.</li>
+					<li>Lorem ipsum dolor sit amet.</li>
+					<li>Lorem ipsum dolor sit amet.</li>
+				</ul>
+
+				<div class="object">
+					<h5>Пример с visibility: hidden</h5>
+					<p>Необходимо вешать hover на родителя, чтобы избежать мигания</p>
+				</div>
+
+
+				<a href="https://elisaveta-vi.github.io/lesson8_figma/" class="link-figma">Макет Figma</a>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer-container"></div>
+		</footer>
+	</div>
+</body>
+
+</html>

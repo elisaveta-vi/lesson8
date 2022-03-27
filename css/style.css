@@ -1,0 +1,414 @@
+@import "null.css";
+@import url("https://fonts.googleapis.com/css?family=Roboto+Serif:regular,700,900,italic&display=swap");
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+body {
+	font-size: 18px;
+	font-family: "Roboto", sans-serif;
+	line-height: 1.3;
+	text-align: center;
+}
+
+h1 {
+	font-size: 50px;
+	text-transform: uppercase;
+	font-weight: 900;
+	color: brown;
+	text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.39);
+	margin-bottom: 30px;
+}
+.state {
+	display: inline-block;
+	max-width: 500px;
+	margin-right: 20px;
+}
+h2 {
+	font-size: 30px;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+h3 {
+	font-size: 40px;
+	margin-bottom: 20px;
+	color: blue;
+}
+.hover-title {
+	display: inline-block;
+}
+h4 {
+	font-size: 30px;
+	margin-bottom: 10px;
+	color: rgb(194, 50, 175);
+}
+h4:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+p {
+	margin-bottom: 20px;
+}
+.hover-title:hover {
+	cursor: pointer;
+	color: blue;
+	text-decoration: green wavy underline;
+}
+.hover-text {
+	border: 4px dotted rgb(228, 25, 25);
+	background-color: rgb(13, 64, 230);
+	color: #fff;
+	max-width: 200px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.box {
+	margin-bottom: 40px;
+	border: 2px solid red;
+	padding: 10px;
+	border-radius: 10px;
+}
+.hover-box:hover {
+	box-shadow: 10px 11px 19px 1px rgb(203, 212, 193);
+	background: rgb(101, 246, 4);
+	background: radial-gradient(
+		circle,
+		rgba(101, 246, 4, 0.5718662464985995) 15%,
+		rgba(236, 230, 20, 0.22452731092436973) 56%
+	);
+}
+.hover-text:hover {
+	height: 200px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.link-example {
+	display: inline-block;
+	font-size: 25px;
+	padding: 2px 10px;
+	background-color: rgb(21, 132, 236);
+	color: white;
+	border-radius: 16px;
+	margin-bottom: 20px;
+}
+.link-example:hover {
+	box-shadow: 2px 5px 5px 0 grey;
+}
+.block-paragraph p:hover {
+	background-color: aqua;
+}
+.block-paragraph p:hover span {
+	font-weight: 900;
+}
+
+.active-box p {
+	font-style: italic;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+.link {
+	display: inline-block;
+	padding: 5px 10px;
+	font-size: 30px;
+	color: #fff;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px 2px grey;
+	background-color: rgb(248, 79, 18);
+}
+
+.active-link:hover {
+	box-shadow: 1px 1px 1px 1px grey;
+	background-color: rgb(251, 107, 54);
+}
+
+.active-link:active {
+	box-shadow: inset 0px 0px 10px 0px #000;
+	background-color: rgb(45, 122, 223);
+}
+
+.eat-link {
+	color: rgb(36, 211, 36);
+}
+.eat-link:hover {
+	color: red;
+}
+.eat-link:active {
+	text-decoration: underline;
+}
+.eat-link:visited {
+	color: grey;
+}
+.focus-link {
+	font-size: 25px;
+	display: inline-block;
+	padding: 10px 20px;
+	border-radius: 15px;
+	background-color: aquamarine;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	color: #000;
+}
+.focus-link:focus {
+	outline: 4px solid brown;
+	background-color: rgb(9, 88, 6);
+	color: #fff;
+	font-weight: 700;
+}
+.link-target {
+	margin-bottom: 20px;
+}
+.text-target {
+	padding: 20px;
+	background-color: rgba(255, 255, 0, 0.445);
+	font-size: 20px;
+	font-weight: 700;
+	display: none;
+}
+.text-target:target {
+	display: block;
+}
+.frame {
+	border: 1px solid rgb(13, 98, 32);
+	padding: 10px;
+	margin-bottom: 30px;
+}
+.children p {
+	padding: 20px;
+	background-color: rgba(21, 164, 230, 0.548);
+}
+
+.children p:first-child {
+	border-radius: 20px;
+	border: 4px solid blue;
+	box-shadow: 0px 0px 10px 5px blue;
+}
+
+.child {
+	text-transform: uppercase;
+	font-weight: 900;
+	color: red;
+}
+
+.children p:last-child {
+	padding: 20px;
+	border: 8px dotted red;
+	border-radius: 20px;
+}
+.kid {
+	padding: 10px;
+	margin-bottom: 20px;
+	display: inline-block;
+	max-width: 500px;
+	margin-right: 20px;
+	background-color: rgba(128, 128, 128, 0.123);
+}
+
+.children-type p {
+	padding: 10px;
+	margin-bottom: 10px;
+
+	border-radius: 20px;
+}
+.children-type .span {
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.children-type p:first-of-type {
+	background-color: rgba(223, 47, 208, 0.356);
+}
+
+.children-type p:last-of-type {
+	background-color: aqua;
+}
+.star *:first-child {
+	color: red;
+}
+.star *:last-child {
+	color: green;
+}
+
+.top {
+	border-top: 20px solid #fff;
+}
+.nth p:nth-child(3) {
+	color: red;
+	text-decoration: underline;
+}
+
+.odd p:nth-child(odd) {
+	color: green;
+}
+.even p:nth-child(even) {
+	color: red;
+}
+
+.third p:nth-child(3n) {
+	color: blue;
+}
+
+.combo p:nth-child(3n + 2) {
+	color: orange;
+}
+.complit p:nth-of-type(even) {
+	color: crimson;
+	text-decoration: underline;
+}
+
+.complit span {
+	color: green;
+}
+
+.safe {
+	background-color: rgba(0, 128, 0, 0.171);
+}
+.safe-text {
+	background-color: green;
+	color: #fff;
+}
+
+.exept p:not(:first-of-type) {
+	background-color: rgb(56, 199, 175);
+}
+.subtitle {
+	font-size: 30px;
+	color: red;
+}
+.indent {
+	padding: 10px;
+	background-color: rgba(238, 241, 43, 0.849);
+	max-width: 400px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+.indent p {
+	background-color: #fff;
+	margin-bottom: 0;
+}
+.indent p:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.good {
+	max-width: 400px;
+	margin: 0 auto;
+	margin-bottom: 60px;
+	padding: 10px;
+	background-color: rgb(172, 231, 34);
+}
+.link-good {
+	color: crimson;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.good *:last-child {
+	margin-bottom: 0;
+}
+
+h5 {
+	margin-bottom: 20px;
+}
+.line {
+	max-width: 300px;
+	padding: 10px;
+	margin: 0 auto 20px;
+	background-color: rgb(59, 228, 67);
+}
+.line p {
+	margin-bottom: 0;
+}
+.line p::first-line {
+	color: red;
+}
+
+.line p::first-letter {
+	font-size: 40px;
+	color: blue;
+}
+
+.list {
+	text-align: left;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.list li {
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.list li::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: darkmagenta;
+	margin-right: 10px;
+}
+
+.list li::after {
+	content: "";
+	display: block;
+	height: 2px;
+	width: 50%;
+	background-color: red;
+}
+.sum:hover::before {
+	content: "";
+	display: block;
+	width: 500px;
+	height: 10px;
+	background-color: blue;
+	margin-bottom: 20px;
+}
+
+.counter-list {
+	max-width: 300px;
+	margin: 0 auto 40px;
+	text-align: left;
+	counter-reset: number;
+}
+.counter-list li::before {
+	counter-increment: number 2;
+	content: counter(number) ")";
+	font-size: 40px;
+	color: rgb(95, 165, 48);
+	width: 40px;
+	height: 40px;
+}
+h5 {
+	font-weight: 700;
+	font-size: 20px;
+	color: red;
+}
+
+.next {
+	margin-bottom: 30px;
+}
+.next li:hover + li {
+	color: blue;
+}
+
+.object {
+	max-width: 500px;
+	border-color: beige;
+	padding: 10px;
+	margin: 0 auto 20px;
+}
+.object:hover p {
+	visibility: hidden;
+}
+
+.link-figma {
+	display: inline-block;
+	text-align: center;
+	border-radius: 20px;
+	background-color: red;
+	color: #fff;
+	padding: 20px;
+	font-size: 50px;
+}
